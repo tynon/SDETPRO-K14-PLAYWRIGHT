@@ -8,7 +8,7 @@ test('Login test', async ({page}) => {
 
     await page.goto("https://playwright.dev");
 
-    await page.waitForTimeout(3000);
+    await page.waitForTimeout(1000);
 
 
 })
