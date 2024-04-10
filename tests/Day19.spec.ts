@@ -62,6 +62,16 @@ test.only('Handle login form', async({page}) => {
     await page.locator('button[type="submit"]').click();
     await page.waitForLoadState("domcontentloaded");
 
+ // Get text
+    // text content: get all text in element (inclue child element / hidden element)
+    let textContent = page.locator('h4').textContent();
+
+    // inner text: only get display text (exclude hidden element)
+    let innerText = page.locator('h4').innerText();
+
+    console.log(textContent);
+    console.log(innerText);
+
     await page.waitForTimeout(2000);
 
 })
