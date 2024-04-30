@@ -1,5 +1,7 @@
 import { Page } from "@playwright/test";
 import SearchComponent from "../components/SearchComponent";
+import ProductItemComponent from "../components/ProductItemComponent";
+import { promises } from "dns";
 
 export default class HomePage {
 
@@ -9,5 +11,10 @@ export default class HomePage {
 
     searchComponent(): SearchComponent {
         return new SearchComponent(this.page.locator(SearchComponent.selector));
+    }
+
+    async productItemComponentList(): Promise<ProductItemComponent[]> {
+        const productItemComponents = await this.page.locator(ProductItemComponent.selector).all();
+        return productItemComponents.map(comp => new ProductItemComponent(comp));
     }
 }

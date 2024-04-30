@@ -16,7 +16,7 @@ export default class SearchComponent {
     }
 
     searchBtn(): Locator {
-        return this.component.locator(this.searchBoxLoc);
+        return this.component.locator(this.searchBtnLoc);
     }
     
 }

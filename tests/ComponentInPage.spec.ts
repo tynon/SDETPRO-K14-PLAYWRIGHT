@@ -12,5 +12,5 @@ test('Test Component in Page', async ({page}) =>{
     await searchComponent.searchBox().fill("laptop");
     await searchComponent.searchBtn().click();
 
-
+    await page.waitForTimeout(5000);
 })

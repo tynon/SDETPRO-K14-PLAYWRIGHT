@@ -8,4 +8,6 @@ test('Test POM method 01 - Introducing main interaction methods', async ({page})
     await loginPage.password().fill("SuperSecretPassword!");
     await loginPage.loginBtn().click();
     await page.waitForURL('**/secure');
+
+    await page.waitForTimeout(3000);
 })
