@@ -11,6 +11,6 @@ test('Test Generic in Page', async ({page}) =>{
     const cheapComputerComponent: ComputerEssentialComponent = computerDetailsPage.computerComp(CheapComputerComponent);
     const standardomputerComponent: ComputerEssentialComponent = computerDetailsPage.computerComp(StandardComputerComponent);
 
-    cheapComputerComponent.selectProcessorType("test");
-    standardomputerComponent.selectProcessorType("test1");
+    await cheapComputerComponent.selectProcessorType("test");
+    await standardomputerComponent.selectProcessorType("test1");
 })
